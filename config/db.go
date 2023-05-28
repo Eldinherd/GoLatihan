@@ -20,5 +20,5 @@ func DBConnect() {
 		fmt.Println("DB connected")
 		DB = db
 	}
-	db.AutoMigrate(&entity.Product{}, &entity.Order{})
+	db.AutoMigrate(&entity.Login{}, &entity.Register{})
 }
