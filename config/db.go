@@ -12,10 +12,10 @@ import (
 var DB *gorm.DB
 
 func DBConnect() {
-	conn := "host=localhost user=postgres password=admin123 dbname=trial_class_db port=5432 sslmode=disable"
+	conn := "host=localhost user=postgres password=admin123 dbname=latihan2 port=5432 sslmode=disable"
 	db, err := gorm.Open(postgres.Open(conn), &gorm.Config{})
 	if err != nil {
-		log.Fatal("Failed to connect databasr", err.Error())
+		log.Fatal("Failed to connect database", err.Error())
 	} else {
 		fmt.Println("DB connected")
 		DB = db
